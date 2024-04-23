@@ -34,13 +34,13 @@
   // lit_actions/src/fetch.action.ts
   var require_fetch_action = __commonJS({
     "lit_actions/src/fetch.action.ts"(exports) {
+      var customParams;
       (() => __async(exports, null, function* () {
         const url = "https://api.weather.gov/gridpoints/TOP/31,80/forecast";
         const resp = yield fetch(url).then((response) => response.json());
         const temp = resp.properties.periods[0].temperature;
         console.log("temp : ", temp);
-        if (temp < 60) {
-        }
+        console.log("customParams : ", customParams);
         const sigShare = yield LitActions.signEcdsa({ toSign, publicKey, sigName });
       }))();
     }

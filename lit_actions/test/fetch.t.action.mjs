@@ -15,8 +15,10 @@ try {
     code: litActionCode,
     authSig,
     jsParams: {
+      toSign: 'random message to sign',
       publicKey: pkpPublicKey,
-      sigName: "fetch-action-sig"
+      sigName: "fetch-action-sig",
+      customParams: "abcdefg"
     },
   });
   console.log(res);
