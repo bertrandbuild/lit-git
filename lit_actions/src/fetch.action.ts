@@ -11,14 +11,9 @@
   const temp = resp.properties.periods[0].temperature;
 
   console.log("temp : ", temp);
-
-  // only sign if the temperature is above 60.  if it's below 60, exit.
-  if (temp < 60) {
-    return;
-  }
   
   // this requests a signature share from the Lit Node
   // the signature share will be automatically returned in the HTTP response from the node
   // all the params (toSign, publicKey, sigName) are passed in from the LitJsSdk.executeJs() function
-  const sigShare = await LitActions.signEcdsa({ toSign, publicKey , sigName });
+  const sigShare = await LitActions.signEcdsa({ toSign, publicKey , sigName }); // FIXME: internal id for request: lit_abeabd3f48776. "ReferenceError: toSign is not defined\n"
 })();

@@ -40,7 +40,6 @@
         const temp = resp.properties.periods[0].temperature;
         console.log("temp : ", temp);
         if (temp < 60) {
-          return;
         }
         const sigShare = yield LitActions.signEcdsa({ toSign, publicKey, sigName });
       }))();

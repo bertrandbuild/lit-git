@@ -14,7 +14,7 @@ const helloWorld: SignData = [
 (async () => {
   // this requests a signature share from the Lit Node
   // the signature share will be automatically returned in the HTTP response from the node
-  const sigShare = await LitActions.signEcdsa({
+  const sigShare = await LitActions.signEcdsa({ // FIXME: internal id for request: lit_f33c49028af53 - Error getting owner of PKP
     toSign: new Uint8Array(helloWorld),
     publicKey, // <-- You should pass this in jsParam
     sigName,
