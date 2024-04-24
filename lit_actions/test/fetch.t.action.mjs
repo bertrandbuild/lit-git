@@ -15,7 +15,7 @@ try {
     code: litActionCode,
     authSig,
     jsParams: {
-      toSign: 'random message to sign',
+      toSign: authSig.signedMessage,
       publicKey: pkpPublicKey,
       sigName: "fetch-action-sig",
       customParams: "abcdefg"
